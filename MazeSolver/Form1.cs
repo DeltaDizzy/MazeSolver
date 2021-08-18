@@ -19,7 +19,8 @@ namespace MazeSolver
         Stack<MazeNode> path = new Stack<MazeNode>();
         Queue<MazeNode> nextPoint = new Queue<MazeNode>();
         Stopwatch timer = new Stopwatch();
-        
+        MazeNode target;
+        Vector2 playerpos;
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace MazeSolver
             }
 
             SetParents();
+            target = nodeMap[0];
             
         }
 
@@ -103,12 +105,12 @@ namespace MazeSolver
             }
             if (current.ID == 0)
             {
-                MessageBox.Show("PATH TRACED");
+                //MessageBox.Show("PATH TRACED");
             }
             
-            while(patch.Count > 0)
+            while(path.Count > 0)
             {
-                nextPount.Enqueue(path.Pop());
+                nextPoint.Enqueue(path.Pop());
             }
             
             //foreach (MazeNode item in path)
@@ -117,43 +119,43 @@ namespace MazeSolver
             //}
         }
 
-        public double GetDistance(Vector2 current, Vector2 goal)
-        {
-            return Math.Abs(current.X - goal.X) + Math.Abs(current.Y - goal.Y); 
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             TracePath(nodeMap);
             mazetimer.Enabled = true;
             
         }
-
-        private void mazetimer_Tick(object sender, EventArgs e)
+        
+        private void SelectWayPoint()
         {
-            // defne target point
-            MazeNode target = null;
-            try
-            {
-                // retrieve target info
-                target = nextPoint.Peek();
-            }
-            catch (Exception)
-            {
-            }
-            // convery pos to vector2 
-            Vector2 playerpos = new Vector2(pnlPlayer.Location.X, pnlPlayer.Location.Y);
-            // find dir to next waypoint
-            Vector2 jump = Vector2.Normalize(target.Position - playerpos);
-            if (jump.Length() < 0.1f)
+            playerpos = new Vector2(pnlPlayer.Location.X, pnlPlayer.Location.Y);
+            float nextPointDistance = Vector2.Distance(playerpos, target.Position);
+            // find closest picturebox
+            // are we intersecting it?
+            //if so dequeue
+            //PictureBox pointbox = nodeMarkers.Find(p => p.)
+            if (nextPointDistance < 5f)
             {
                 nextPoint.Dequeue();
-                return;
+                target = nextPoint.Peek();
             }
-            jump *= 0.1;
+        }
+        private void mazetimer_Tick(object sender, EventArgs e)
+        {
+            SelectWayPoint();
+            // find dir to next waypoint
+            Vector2 jump = Vector2.Subtract(target.Position, playerpos);
+            
+            jump = Vector2.Multiply(0.5f, jump);
+            //if (jump.Length() < 0.1f)
+            //{
+            //    nextPoint.Dequeue();
+            //    return;
+            //}
             //MOVE BY THE SLOPE
             playerpos += jump;
-            pnPlayer.Location = new Point(playerpos.X, playerpos.Y);
+            pnlPlayer.Top += (int)jump.Y;
+            pnlPlayer.Left += (int)jump.X;
         }
     }
 }
