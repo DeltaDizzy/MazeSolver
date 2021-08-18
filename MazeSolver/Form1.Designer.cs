@@ -154,7 +154,6 @@ namespace MazeSolver
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.pnlPlayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -203,8 +202,7 @@ namespace MazeSolver
             // pnlPlayer
             // 
             this.pnlPlayer.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pnlPlayer.Controls.Add(this.pictureBox4);
-            this.pnlPlayer.Location = new System.Drawing.Point(304, 211);
+            this.pnlPlayer.Location = new System.Drawing.Point(64, -3);
             this.pnlPlayer.Name = "pnlPlayer";
             this.pnlPlayer.Size = new System.Drawing.Size(60, 63);
             this.pnlPlayer.TabIndex = 69;
@@ -212,7 +210,7 @@ namespace MazeSolver
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox4.Location = new System.Drawing.Point(14, 26);
+            this.pictureBox4.Location = new System.Drawing.Point(318, 238);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(24, 19);
             this.pictureBox4.TabIndex = 75;
@@ -547,7 +545,7 @@ namespace MazeSolver
             // 
             // mazetimer
             // 
-            this.mazetimer.Enabled = true;
+            this.mazetimer.Interval = 10;
             this.mazetimer.Tick += new System.EventHandler(this.mazetimer_Tick);
             // 
             // pictureBox1
@@ -661,7 +659,7 @@ namespace MazeSolver
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox14.Location = new System.Drawing.Point(536, 452);
+            this.pictureBox14.Location = new System.Drawing.Point(430, 570);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(24, 19);
             this.pictureBox14.TabIndex = 85;
@@ -670,7 +668,7 @@ namespace MazeSolver
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox15.Location = new System.Drawing.Point(536, 569);
+            this.pictureBox15.Location = new System.Drawing.Point(430, 453);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(24, 19);
             this.pictureBox15.TabIndex = 86;
@@ -679,7 +677,7 @@ namespace MazeSolver
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox16.Location = new System.Drawing.Point(430, 569);
+            this.pictureBox16.Location = new System.Drawing.Point(536, 453);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(24, 19);
             this.pictureBox16.TabIndex = 87;
@@ -688,7 +686,7 @@ namespace MazeSolver
             // pictureBox17
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox17.Location = new System.Drawing.Point(430, 452);
+            this.pictureBox17.Location = new System.Drawing.Point(536, 568);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(24, 19);
             this.pictureBox17.TabIndex = 88;
@@ -895,7 +893,7 @@ namespace MazeSolver
             // pictureBox40
             // 
             this.pictureBox40.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox40.Location = new System.Drawing.Point(1121, 627);
+            this.pictureBox40.Location = new System.Drawing.Point(888, 569);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(24, 19);
             this.pictureBox40.TabIndex = 111;
@@ -913,7 +911,7 @@ namespace MazeSolver
             // pictureBox42
             // 
             this.pictureBox42.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox42.Location = new System.Drawing.Point(888, 569);
+            this.pictureBox42.Location = new System.Drawing.Point(1104, 569);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(24, 19);
             this.pictureBox42.TabIndex = 111;
@@ -922,7 +920,7 @@ namespace MazeSolver
             // pictureBox43
             // 
             this.pictureBox43.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox43.Location = new System.Drawing.Point(1121, 569);
+            this.pictureBox43.Location = new System.Drawing.Point(1104, 627);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(24, 19);
             this.pictureBox43.TabIndex = 113;
@@ -982,7 +980,7 @@ namespace MazeSolver
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(294, 237);
+            this.label7.Location = new System.Drawing.Point(346, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(18, 20);
             this.label7.TabIndex = 119;
@@ -1052,7 +1050,7 @@ namespace MazeSolver
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(460, 452);
+            this.label14.Location = new System.Drawing.Point(566, 568);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(27, 20);
             this.label14.TabIndex = 126;
@@ -1072,7 +1070,7 @@ namespace MazeSolver
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(460, 568);
+            this.label16.Location = new System.Drawing.Point(566, 452);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(27, 20);
             this.label16.TabIndex = 128;
@@ -1082,7 +1080,7 @@ namespace MazeSolver
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(566, 452);
+            this.label17.Location = new System.Drawing.Point(460, 570);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(27, 20);
             this.label17.TabIndex = 129;
@@ -1092,7 +1090,7 @@ namespace MazeSolver
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(566, 568);
+            this.label18.Location = new System.Drawing.Point(460, 452);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(27, 20);
             this.label18.TabIndex = 130;
@@ -1114,9 +1112,9 @@ namespace MazeSolver
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(694, 452);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(18, 20);
+            this.label20.Size = new System.Drawing.Size(27, 20);
             this.label20.TabIndex = 132;
-            this.label20.Text = "5";
+            this.label20.Text = "20";
             // 
             // label21
             // 
@@ -1124,9 +1122,9 @@ namespace MazeSolver
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(805, 451);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(18, 20);
+            this.label21.Size = new System.Drawing.Size(27, 20);
             this.label21.TabIndex = 133;
-            this.label21.Text = "5";
+            this.label21.Text = "21";
             // 
             // label22
             // 
@@ -1134,9 +1132,9 @@ namespace MazeSolver
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(691, 344);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(18, 20);
+            this.label22.Size = new System.Drawing.Size(27, 20);
             this.label22.TabIndex = 134;
-            this.label22.Text = "5";
+            this.label22.Text = "19";
             // 
             // label23
             // 
@@ -1154,9 +1152,9 @@ namespace MazeSolver
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(566, 220);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(18, 20);
+            this.label24.Size = new System.Drawing.Size(27, 20);
             this.label24.TabIndex = 136;
-            this.label24.Text = "5";
+            this.label24.Text = "22";
             // 
             // label25
             // 
@@ -1164,9 +1162,9 @@ namespace MazeSolver
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(460, 220);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(18, 20);
+            this.label25.Size = new System.Drawing.Size(27, 20);
             this.label25.TabIndex = 137;
-            this.label25.Text = "5";
+            this.label25.Text = "23";
             // 
             // label26
             // 
@@ -1174,9 +1172,9 @@ namespace MazeSolver
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(460, 89);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(18, 20);
+            this.label26.Size = new System.Drawing.Size(27, 20);
             this.label26.TabIndex = 138;
-            this.label26.Text = "5";
+            this.label26.Text = "24";
             // 
             // label27
             // 
@@ -1184,9 +1182,9 @@ namespace MazeSolver
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(690, 89);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(18, 20);
+            this.label27.Size = new System.Drawing.Size(27, 20);
             this.label27.TabIndex = 139;
-            this.label27.Text = "5";
+            this.label27.Text = "25";
             // 
             // label28
             // 
@@ -1194,9 +1192,9 @@ namespace MazeSolver
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(690, 219);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(18, 20);
+            this.label28.Size = new System.Drawing.Size(27, 20);
             this.label28.TabIndex = 140;
-            this.label28.Text = "5";
+            this.label28.Text = "26";
             // 
             // label29
             // 
@@ -1204,9 +1202,9 @@ namespace MazeSolver
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(805, 220);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(18, 20);
+            this.label29.Size = new System.Drawing.Size(27, 20);
             this.label29.TabIndex = 141;
-            this.label29.Text = "5";
+            this.label29.Text = "27";
             // 
             // label30
             // 
@@ -1214,9 +1212,9 @@ namespace MazeSolver
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(805, 344);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(18, 20);
+            this.label30.Size = new System.Drawing.Size(27, 20);
             this.label30.TabIndex = 142;
-            this.label30.Text = "5";
+            this.label30.Text = "28";
             // 
             // label31
             // 
@@ -1224,9 +1222,9 @@ namespace MazeSolver
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(918, 343);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(18, 20);
+            this.label31.Size = new System.Drawing.Size(27, 20);
             this.label31.TabIndex = 143;
-            this.label31.Text = "5";
+            this.label31.Text = "29";
             // 
             // label32
             // 
@@ -1234,9 +1232,9 @@ namespace MazeSolver
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(918, 210);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(18, 20);
+            this.label32.Size = new System.Drawing.Size(27, 20);
             this.label32.TabIndex = 144;
-            this.label32.Text = "5";
+            this.label32.Text = "30";
             // 
             // label33
             // 
@@ -1244,9 +1242,9 @@ namespace MazeSolver
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(805, 88);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(18, 20);
+            this.label33.Size = new System.Drawing.Size(27, 20);
             this.label33.TabIndex = 145;
-            this.label33.Text = "5";
+            this.label33.Text = "31";
             // 
             // label34
             // 
@@ -1254,9 +1252,9 @@ namespace MazeSolver
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(1151, 89);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(18, 20);
+            this.label34.Size = new System.Drawing.Size(27, 20);
             this.label34.TabIndex = 146;
-            this.label34.Text = "5";
+            this.label34.Text = "32";
             // 
             // label35
             // 
@@ -1264,9 +1262,9 @@ namespace MazeSolver
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(1036, 220);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(18, 20);
+            this.label35.Size = new System.Drawing.Size(27, 20);
             this.label35.TabIndex = 147;
-            this.label35.Text = "5";
+            this.label35.Text = "34";
             // 
             // label36
             // 
@@ -1274,9 +1272,9 @@ namespace MazeSolver
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(1151, 219);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(18, 20);
+            this.label36.Size = new System.Drawing.Size(27, 20);
             this.label36.TabIndex = 148;
-            this.label36.Text = "5";
+            this.label36.Text = "33";
             // 
             // label37
             // 
@@ -1284,19 +1282,19 @@ namespace MazeSolver
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(1153, 343);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(18, 20);
+            this.label37.Size = new System.Drawing.Size(27, 20);
             this.label37.TabIndex = 149;
-            this.label37.Text = "5";
+            this.label37.Text = "37";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(1151, 569);
+            this.label38.Location = new System.Drawing.Point(1134, 627);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(18, 20);
+            this.label38.Size = new System.Drawing.Size(27, 20);
             this.label38.TabIndex = 150;
-            this.label38.Text = "5";
+            this.label38.Text = "42";
             // 
             // label39
             // 
@@ -1304,9 +1302,9 @@ namespace MazeSolver
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.Location = new System.Drawing.Point(918, 452);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(18, 20);
+            this.label39.Size = new System.Drawing.Size(27, 20);
             this.label39.TabIndex = 150;
-            this.label39.Text = "5";
+            this.label39.Text = "38";
             // 
             // label40
             // 
@@ -1314,9 +1312,9 @@ namespace MazeSolver
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(1036, 451);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(18, 20);
+            this.label40.Size = new System.Drawing.Size(27, 20);
             this.label40.TabIndex = 151;
-            this.label40.Text = "5";
+            this.label40.Text = "35";
             // 
             // label41
             // 
@@ -1324,9 +1322,9 @@ namespace MazeSolver
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(1151, 451);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(18, 20);
+            this.label41.Size = new System.Drawing.Size(27, 20);
             this.label41.TabIndex = 152;
-            this.label41.Text = "5";
+            this.label41.Text = "36";
             // 
             // label42
             // 
@@ -1334,35 +1332,36 @@ namespace MazeSolver
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(805, 568);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(18, 20);
+            this.label42.Size = new System.Drawing.Size(27, 20);
             this.label42.TabIndex = 153;
-            this.label42.Text = "5";
+            this.label42.Text = "40";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(918, 569);
+            this.label43.Location = new System.Drawing.Point(1134, 569);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(18, 20);
+            this.label43.Size = new System.Drawing.Size(27, 20);
             this.label43.TabIndex = 154;
-            this.label43.Text = "5";
+            this.label43.Text = "41";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(1151, 626);
+            this.label44.Location = new System.Drawing.Point(918, 568);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(18, 20);
+            this.label44.Size = new System.Drawing.Size(27, 20);
             this.label44.TabIndex = 155;
-            this.label44.Text = "5";
+            this.label44.Text = "39";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1505, 881);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label44);
             this.Controls.Add(this.label43);
             this.Controls.Add(this.label42);
@@ -1488,7 +1487,6 @@ namespace MazeSolver
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.pnlPlayer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
