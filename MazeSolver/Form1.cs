@@ -31,7 +31,6 @@ namespace MazeSolver
             foreach (var item in nodeMarkers)
             {
                 nodeMap.Add(new MazeNode(new Vector2(item.Location.X, item.Location.Y), nodeMarkers.ToList().IndexOf(item)));
-                
             }
 
             SetParents();
@@ -132,14 +131,17 @@ namespace MazeSolver
 
         private void mazetimer_Tick(object sender, EventArgs e)
         {
+            // defne target point
             MazeNode target = null;
             try
             {
+                // retrieve target info
                 target = nextPoint.Peek();
             }
             catch (Exception)
             {
             }
+            // convery pos to vector2 
             Vector2 playerpos = new Vector2(pnlPlayer.Location.X, pnlPlayer.Location.Y);
             // find dir to next waypoint
             Vector2 jump = Vector2.Normalize(target.Position - playerpos);
@@ -148,7 +150,10 @@ namespace MazeSolver
                 nextPoint.Dequeue();
                 return;
             }
-            playerpos += Vector2.Multiply(0.1f, jump);
+            jump *= 0.1;
+            //MOVE BY THE SLOPE
+            playerpos += jump;
+            pnPlayer.Location = new Point(playerpos.X, playerpos.Y);
         }
     }
 }
