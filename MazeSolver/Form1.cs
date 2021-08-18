@@ -106,11 +106,16 @@ namespace MazeSolver
             {
                 MessageBox.Show("PATH TRACED");
             }
-
-            foreach (MazeNode item in path)
+            
+            while(patch.Count > 0)
             {
-                nextPoint.Enqueue(item);
+                nextPount.Enqueue(path.Pop());
             }
+            
+            //foreach (MazeNode item in path)
+            //{
+            //    nextPoint.Enqueue(item);
+            //}
         }
 
         public double GetDistance(Vector2 current, Vector2 goal)
@@ -138,7 +143,7 @@ namespace MazeSolver
             Vector2 playerpos = new Vector2(pnlPlayer.Location.X, pnlPlayer.Location.Y);
             // find dir to next waypoint
             Vector2 jump = Vector2.Normalize(target.Position - playerpos);
-            if (jump.Length() < 2f)
+            if (jump.Length() < 0.1f)
             {
                 nextPoint.Dequeue();
                 return;
