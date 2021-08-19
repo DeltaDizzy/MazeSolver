@@ -36,7 +36,7 @@ namespace MazeSolver
 
             SetParents();
             target = nodeMap[0];
-            
+            //MessageBox.Show(nodeMap[6].ID.ToString());
         }
 
         public void SetParents()
@@ -125,7 +125,7 @@ namespace MazeSolver
             mazetimer.Enabled = true;
             
         }
-        
+        bool closeENough = false;
         private void SelectWayPoint()
         {
             playerpos = new Vector2(pnlPlayer.Location.X, pnlPlayer.Location.Y);
@@ -134,28 +134,59 @@ namespace MazeSolver
             // are we intersecting it?
             //if so dequeue
             //PictureBox pointbox = nodeMarkers.Find(p => p.)
-            if (nextPointDistance < 5f)
+            if (nextPointDistance < 10f)
             {
-                nextPoint.Dequeue();
-                target = nextPoint.Peek();
+                /*try
+                {
+                    if (nextPoint.Count != 0)
+                    {
+                        nextPoint.Dequeue();
+                        target = nextPoint.Peek();
+                    }
+                    else
+                    {
+                        target = nodeMap[41];
+                    }
+                }
+                catch (Exception e)
+                {
+
+                    
+                }*/
             }
+            label1.Text = $"Target is {target.ID}, Playerpos is ({playerpos.X}, {playerpos.Y})";
         }
         private void mazetimer_Tick(object sender, EventArgs e)
         {
             SelectWayPoint();
-            // find dir to next waypoint
-            Vector2 jump = Vector2.Subtract(target.Position, playerpos);
-            
-            jump = Vector2.Multiply(0.5f, jump);
+            // what direction is it
+            /*if (target.Position.X < playerpos.X)
+            {
+                pnlPlayer.Left -= 1;
+            }
+            if (target.Position.X > playerpos.X)
+            {
+                pnlPlayer.Left += 1;
+            }
+            if (target.Position.Y < playerpos.Y)
+            {
+                pnlPlayer.Top -= 1;
+
+            }
+            if (target.Position.Y > playerpos.Y)
+            {
+                pnlPlayer.Top += 1;
+            }*/
+            pnlPlayer.Location = new Point((int)target.Position.X, (int)target.Position.Y);
+
+            //jump = Vector2.Multiply(0.5f, jump);
             //if (jump.Length() < 0.1f)
             //{
             //    nextPoint.Dequeue();
             //    return;
             //}
             //MOVE BY THE SLOPE
-            playerpos += jump;
-            pnlPlayer.Top += (int)jump.Y;
-            pnlPlayer.Left += (int)jump.X;
+            //playerpos += jump;
         }
     }
 }
